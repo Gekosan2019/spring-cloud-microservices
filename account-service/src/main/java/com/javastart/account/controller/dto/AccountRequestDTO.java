@@ -1,16 +1,14 @@
-package com.javastart.account.controller;
+package com.javastart.account.controller.dto;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import java.time.OffsetDateTime;
 import java.util.List;
 
 @Getter
-@AllArgsConstructor
-public class AccountResponseDTO {
-
-    private Long accountId;
+@NoArgsConstructor
+public class AccountRequestDTO {
 
     private String name;
 
@@ -21,5 +19,4 @@ public class AccountResponseDTO {
     private List<Long> bills;
 
     private OffsetDateTime creationDate;
-
 }

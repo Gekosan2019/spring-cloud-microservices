@@ -18,5 +18,4 @@ public class AccountRequestDTO {
 
     private List<Long> bills;
 
-    private OffsetDateTime creationDate;
 }

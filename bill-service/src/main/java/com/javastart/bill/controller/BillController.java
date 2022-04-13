@@ -56,5 +56,5 @@ public class BillController {
             return ResponseEntity.status(HttpStatus.UNPROCESSABLE_ENTITY).body(e.getMessage());
         }
     }
-    
+
 }

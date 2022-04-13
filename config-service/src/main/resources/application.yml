@@ -11,4 +11,4 @@ spring:
       password: alex2002
 
 server:
-  port:8001
+  port: 8001

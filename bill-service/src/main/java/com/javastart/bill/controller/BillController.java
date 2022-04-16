@@ -11,6 +11,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 @RestController
 public class BillController {
 
@@ -55,6 +58,11 @@ public class BillController {
         } catch (BillNotFoundException e) {
             return ResponseEntity.status(HttpStatus.UNPROCESSABLE_ENTITY).body(e.getMessage());
         }
+    }
+
+    @GetMapping("/account/{accountId}")
+    public List<BillResponseDTO> getBillsByAccountId(@PathVariable Long accountId) {
+        return billService.getBillsByAccountId(accountId).stream().map((bill) -> billMapper.billToBillResponseDTO(bill)).collect(Collectors.toList());
     }
 
 }

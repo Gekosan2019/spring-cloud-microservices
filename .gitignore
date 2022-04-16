@@ -8,3 +8,4 @@ deposit-service/build
 notification-service/build
 registry/build
 gateway/build
+notification-service/src/main/resources/mail-prop.properties

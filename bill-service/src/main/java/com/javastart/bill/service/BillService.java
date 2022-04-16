@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 import java.time.OffsetDateTime;
+import java.util.List;
 
 @Service
 public class BillService {
@@ -39,6 +40,10 @@ public class BillService {
         Bill deletedbill = billRepository.findById(billId).orElseThrow(() -> new BillNotFoundException("Unable to find bild with id: " + billId));
         billRepository.deleteById(billId);
         return deletedbill;
+    }
+
+    public List<Bill> getBillsByAccountId(Long accountId) {
+        return billRepository.getBillsByAccountId(accountId);
     }
 
 }

@@ -3,7 +3,7 @@ spring:
     database: POSTGRESQL
     properties.hibernate.temp.use_jdbc_metadata_defaults: false
     hibernate:
-      ddl-auto: create
+      ddl-auto: create-drop
     properties:
   datasource:
     platform: postgres
